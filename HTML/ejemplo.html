@@ -5,62 +5,152 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>        
-        .menu-bar {
-            width: 100%;
-            height: auto;
-            display: flex;    
-            justify-content: center;
-            align-items: center;
-            font-size: 12px;
-            background-color: #FC7323;    
-        }
-        
-        .menu-bar .enlaces ul li {
-            display: inline-block;
-            padding: 0 auto;
-            list-style: none;            
-        }
-        .menu-bar .enlaces ul li :hover{
-            position: static;           
-        }
-        .menu-bar .enlaces li ul{
-            z-index: 9999;
-            position: absolute;
-            left: -999em;
-            height: auto;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-        }
+    <style>
+            .menu-principal{
+                width: 100%;
+                background-color: #fc7323;
+                filter: drop-shadow(0px 0px 40px rgba(0, 0, 0, 0.15));;  
+                background-color: white;  
+            }
+
+            .menu-bar {
+                width: 100%;
+                height: 68px;
+                background-color: #FC7323;
+                display: flex;    
+                justify-content: space-evenly;
+                align-items: center;
+                font-size: 12px;
+            }
+            .menu-bar .enlaces {
+                width: 80%;
+                height: auto;
+            }
+            .enlaces ul {
+                list-style: none;
+            }
+            .menu > li{
+                position: relative;
+                display: inline-block;
+                margin: 0;
+                padding: 0;
+            }
+            .menu > li > a{
+                text-decoration: none;
+                display: block;
+                font-size: 18px;
+                padding: 0 auto;
+                color: white;
+                font-weight: bold;
+            }
+            .menu > li:hover .sub-menu {
+                opacity: 1;
+                visibility: visible;
+            }
+            /* Sub Menu */
+
+            .sub-menu{
+                padding: 0;
+                margin: 18px 5px 0 35px;
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background-color: #FC7323;
+                border-radius: 5px;
+                transition:all 0.3s ease-in-out;                
+                visibility: hidden;
+                opacity: 0;
+            }
+
+            .sub-menu > li {
+                width: 180%;
+                background-color: #FC7323;             
+                border: 1px white solid;
+            }
+
+            .sub-menu > li > a {
+                width: 100%;
+                text-decoration: none;
+                color: #fff;
+                display: flex;
+                font-size: 12px;
+            }
+            .menu-bar .enlaces ul li a {
+                color: white;
+                text-decoration: none;
+                margin: 7px;
+                font-weight: bold;
+            }
+
+            .sub-menu > li:hover {                
+                background-color: black;
+            }
+
+
     </style>
 </head>
 <body>
     <div class="menu-principal">
         <!-- hijo 2 del menu-->
-    <div class="menu-bar" id="menu-bar">
-        <!-- hijo 2.1 del menu-->
-        <nav class="enlaces">
-            <!--lista de enlaces-->
-            <ul>
-                <li ><a href="#">Inicio</a></li>
-                <li><a href="#">Nosotros</a>
-                    <ul>
-                        <li><a href="#">¿Quienes Somos?</a></li>
-                        <li><a href="#">Biblioteca</a></li>
-                        <li><a href="#">Código de integridad</a></li>
-                    </ul>
-                </li>
-                
-                <li><a href="#">SIGA</a></li>
-                <li><a href="#">Bienestar al Aprendiz</a></li>
-                <li><a href="#">Egresados</a></li>
-                <li><a href="#">Programas</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Servicios Laboratorio de Metrología</a></li>
-            </ul>
-        </nav>
+        <div class="menu-bar" id="menu-bar">
+            <!-- hijo 2.1 del menu-->
+            <nav class="enlaces">
+                <!--lista de enlaces-->
+                <ul class="menu">
+                    <li ><a href="#">Inicio</a></li>
+                    <li><a href="#">Nosotros</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">¿Quienes Somos?</a></li>
+                            <li><a href="#">Biblioteca</a></li>
+                            <li><a href="#">Código de integridad</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#">SIGA</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">SIGA</a></li>
+                            <li><a href="#">Ambiental</a></li>
+                            <li><a href="#">Seguridad de la información</a></li>
+                            <li><a href="#">Calidad</a></li>
+                            <li><a href="#">SST</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Bienestar al Aprendiz</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Descripción y Justificación</a></li>
+                            <li><a href="#">Objetivos Estrategicos y operativos</a></li>
+                            <li><a href="#">Apoyos Brindados</a></li>
+                            <li><a href="#">Ficha Técnica Uniformes</a></li>
+                            <li><a href="#">Póliza de accidentes</a></li>
+                            <li><a href="#">Reglamento del Aprendiz</a></li>
+                        </ul></li>
+                    <li><a href="#">Egresados</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Egresados</a></li>
+                            <li><a href="#">Cadena de Formación</a></li>
+                            <li><a href="#">Certificados</a></li>
+                            <li><a href="#">Agencia Pública de Empleo</a></li>
+                        </ul></li>
+                    <li><a href="#">Programas</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Oferta Educativa</a></li>
+                            <li><a href="#">Bilingüismo</a></li>
+                        </ul></li>
+                    <li><a href="#">Servicios</a><ul class="sub-menu">
+                        <li><a href="#">Autoevaluación</a></li>
+                        <li><a href="#">Etapa Productiva</a></li>
+                        <li><a href="#">Evaluación y certificación de competencias laborales</a></li>
+                        <li><a href="#">Mesas Sectoriales</a></li>
+                        </ul></li>
+                    <li><a href="#">Servicios Laboratorio de Metrología</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Laboratorio de Metrologia</a></li>
+                        </ul></li>
+                </ul>
+            </nav>
+        </div>
     </div>
-</div>
 </body>
 </html>
