@@ -5,25 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        footer{
-            border: 1px solid red;
-            padding: 5px;
-            background-color: gray;
-            display: flex;
-            flex-direction: column;
+    <style>        
+        .menu-bar {
+            width: 100%;
+            height: auto;
+            display: flex;    
             justify-content: center;
-            
+            align-items: center;
+            font-size: 12px;
+            background-color: #FC7323;    
         }
         
-        
+        .menu-bar .enlaces ul li {
+            display: inline-block;
+            padding: 0 auto;
+            list-style: none;            
+        }
+        .menu-bar .enlaces ul li :hover{
+            position: static;           
+        }
+        .menu-bar .enlaces li ul{
+            z-index: 9999;
+            position: absolute;
+            left: -999em;
+            height: auto;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
     </style>
 </head>
 <body>
-    <footer>
-        <div class="footer">
-                        
-        </div>
-    </footer>
+    <div class="menu-principal">
+        <!-- hijo 2 del menu-->
+    <div class="menu-bar" id="menu-bar">
+        <!-- hijo 2.1 del menu-->
+        <nav class="enlaces">
+            <!--lista de enlaces-->
+            <ul>
+                <li ><a href="#">Inicio</a></li>
+                <li><a href="#">Nosotros</a>
+                    <ul>
+                        <li><a href="#">¿Quienes Somos?</a></li>
+                        <li><a href="#">Biblioteca</a></li>
+                        <li><a href="#">Código de integridad</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="#">SIGA</a></li>
+                <li><a href="#">Bienestar al Aprendiz</a></li>
+                <li><a href="#">Egresados</a></li>
+                <li><a href="#">Programas</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Servicios Laboratorio de Metrología</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
 </body>
 </html>
