@@ -10,3 +10,7 @@ for (let index = 0; index < hora.length; index++) {
     hora[index].innerHTML = solo_hora
     
 }
+
+function move(x) {
+    x.style.transform = "translateY(-33px)";           
+}
